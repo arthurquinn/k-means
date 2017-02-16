@@ -1,4 +1,4 @@
-function [idx, C, sumD, D] = MyKmeans2(X, K, C0, numIter)
+function [idx, C, sumD, D] = MyKmeans(X, K, C0, numIter)
 
 %%%%%%%%%%%%%%%%Input%%%%%%%%%%%%%%%%%%
 %X is data
@@ -75,10 +75,6 @@ for j = 1:numRowX
     end
 end
 
-end
-
-function D = sqDistance(X,Y)
-D = bsxfun(@plus,dot(X,X,1)',dot(Y,Y,1))-2*(X'*Y);
 end
 
 
